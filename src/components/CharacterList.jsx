@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Character from './Character'
+import './CharacterList.css'
 
 function CharacterList() {
   const [characters, setCharacter] = useState([]);
@@ -15,7 +16,7 @@ function CharacterList() {
   }, []);
 
   return (
-    <div>
+    <div className="character-list">
       {characters.map((character) => {
         return (
             <Character character={character} key={character.id} />
