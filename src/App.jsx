@@ -8,7 +8,7 @@ function App() {
   return (
     <main className = "page-container">
       <LightningAnimation/>
-      <img className='title-img' src={titleImg} alt="Rick And Morty Title" />
+      <img className='title-img title-img-animation' id='titleImg' src={titleImg} alt="Rick And Morty Title" />
       <PageBtnDisplay/>
       <CharacterList/>
       <PageBtnDisplay/>
