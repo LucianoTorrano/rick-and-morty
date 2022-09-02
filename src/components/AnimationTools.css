@@ -1,0 +1,27 @@
+.tools-container{
+    position: fixed;
+    top: 10vh;
+    width: fit-content;
+    min-height: fit-content;
+    background-color: rgba(104, 104, 104, 0.23);
+    box-shadow: 0 0 4rem .1rem rgba(66, 180, 202, 0.44);
+    backdrop-filter: blur(.4rem);
+    z-index: 4;
+    padding: 1rem;
+}
+.tools-title{
+    font-size: 1rem;
+    font-weight: 300;
+    padding-bottom: 1.5rem;
+}
+.tools-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.tools-list_item:hover{
+    cursor: grab;
+}

@@ -12,8 +12,8 @@ function Character({ character }) {
       <div className="character-info">
         <h3 className="character-name">{character.name}</h3>
         <div className="gender-specie-container">
-          <p className="gender">Gender : {character.gender}</p>
-          <p className="specie">Specie : {character.species}</p>
+          <p className="gender"><span>Gender:</span> {character.gender}</p>
+          <p className="specie"><span>Specie:</span> {character.species}</p>
         </div>
       </div>
     </div>

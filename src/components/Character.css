@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 20rem;
+    width: 16rem;
 }
 .blue-bg{
     background-color: rgba(60, 180, 202, .56);
@@ -17,9 +17,9 @@
     border-bottom-right-radius: 4rem ;
 }
 .character-name{
-    padding: 2rem;
+    padding: 1rem;
     font-family: 'Libre Barcode 128 Text', cursive;
-    font-size: 3rem;
+    font-size: 2.4rem;
     text-align: center;
     max-width: 20rem;
     line-height: 3.4rem;
@@ -27,7 +27,11 @@
 .gender-specie-container{
     display: flex;
     justify-content: space-between;
-    font-size: 1.1rem;
+    font-size: .9rem;
     font-weight: 500;
     padding: 1rem;
+}
+.gender span, .specie span{
+    font-weight: 600;
+    color: black;
 }
