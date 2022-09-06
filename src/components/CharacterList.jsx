@@ -22,15 +22,15 @@ function CharacterList() {
   }, [ page ]);
 
   return (
-    <>
+    <div id='characterList'>
       <PageBtnDisplay page={page} setPage={setPage} />
       <div className="character-list">
         {characters.map((character) => {
-          return <Character character={character} key={character.id} />;
+          return <Character character={character} key={character.id} id={character.name.split(' ').join('')} />;
         })}
       </div>
       <PageBtnDisplay page={page} setPage={setPage} />
-    </>
+    </div>
   );
 }
 
