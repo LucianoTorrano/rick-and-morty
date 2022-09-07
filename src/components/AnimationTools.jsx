@@ -37,12 +37,13 @@ function AnimationTools() {
           return (
             <li
               className="tools-list_item"
+              id={animationItem.imgAlt}
               key={index}        
               onDrag = { e => {
                 e.dataTransfer.setData('text', e.target.id)
               }}
             >
-              <img src={animationItem.imgSrc} id={animationItem.imgAlt} alt={animationItem.imgAlt} />
+              <img src={animationItem.imgSrc} alt={animationItem.imgAlt} />
             </li>
           );
         })}

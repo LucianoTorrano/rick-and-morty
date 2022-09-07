@@ -1,8 +1,22 @@
-import { createContext } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const AppContext = createContext();
 
 export function AppContextProvider(props) {
-  return <AppContext.Provider>{props.children}</AppContext.Provider>;
+  const [animation, setAnimation] = useState('');
+
+  useEffect(() => {
+  }, [animation])
+  
+
+  function createAnimation(animationName){
+    setAnimation(animationName);
+  }
+
+  function resetAnimation(){
+    setAnimation('');
+  }
+
+  return <AppContext.Provider value={{animation,createAnimation, resetAnimation}}>{props.children}</AppContext.Provider>;
 }
 

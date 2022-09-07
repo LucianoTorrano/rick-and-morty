@@ -40,3 +40,10 @@
     box-shadow: 0 0 4rem .1rem rgba(66, 180, 202);
     transition: .3s;
 }
+.animation-slots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
