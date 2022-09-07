@@ -39,7 +39,6 @@ function AnimationTools() {
               className="tools-list_item"
               key={index}        
               onDrag = { e => {
-                console.log(e.target.id)
                 e.dataTransfer.setData('text', e.target.id)
               }}
             >
