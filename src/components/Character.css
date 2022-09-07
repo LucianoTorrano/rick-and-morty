@@ -35,3 +35,8 @@
     font-weight: 600;
     color: black;
 }
+.hover-img{
+    filter: grayscale(100%);
+    box-shadow: 0 0 4rem .1rem rgba(66, 180, 202);
+    transition: .4s;
+}

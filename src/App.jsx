@@ -16,7 +16,7 @@ function App() {
           src={titleImg}
           alt="Rick And Morty Title"
         />
-        <CharacterList/>
+        <CharacterList id='characterList'/>
       </main>
     </>
   );

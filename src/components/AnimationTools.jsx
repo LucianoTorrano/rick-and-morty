@@ -35,8 +35,15 @@ function AnimationTools() {
       <ul className="tools-list">
         {animations.map((animationItem, index) => {
           return (
-            <li className="tools-list_item" key={index} id={animationItem.imgAlt}>
-              <img src={animationItem.imgSrc} alt={animationItem.imgAlt} />
+            <li
+              className="tools-list_item"
+              key={index}        
+              onDrag = { e => {
+                console.log(e.target.id)
+                e.dataTransfer.setData('text', e.target.id)
+              }}
+            >
+              <img src={animationItem.imgSrc} id={animationItem.imgAlt} alt={animationItem.imgAlt} />
             </li>
           );
         })}
