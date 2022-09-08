@@ -1,0 +1,74 @@
+.animation-canvas {
+  display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+}
+.diplay-block {
+  display: block;
+}
+.display-none {
+  display: none;
+}
+/* PORTAL GUN ANIMATION */
+.portalGunAnimation {
+  position: absolute;
+  min-height: 150vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  animation: startAnimation .3s linear;
+}
+#portalGunCanvas{
+  z-index: 1;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  filter: blur(20px) contrast(40);
+}
+.portal {
+  z-index: 4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0) scale(1);
+  width: 40rem;
+  height: 40rem;
+  animation: portalMovement 6s linear infinite;
+}
+
+@keyframes portalMovement {
+  0% {
+    transform: translate(-50%, -50%) rotate(0) scale(1);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(270deg) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes startAnimation{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

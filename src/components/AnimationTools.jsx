@@ -1,11 +1,14 @@
-import React from "react";
+import { useContext } from "react";
 import "./AnimationTools.css";
 import PortalGun from "../assets/img/portal-gun.svg";
 import MeeseeksBox from "../assets/img/meeseeks-box.svg";
 import Pickle from "../assets/img/pickle.svg";
 import Flask from "../assets/img/flask.svg";
+import { AppContext } from "../context/AppContext";
 
 function AnimationTools() {
+  const { resetAnimation } = useContext(AppContext);
+
   const animations = [
     {
       id: 0,
@@ -38,9 +41,9 @@ function AnimationTools() {
             <li
               className="tools-list_item"
               id={animationItem.imgAlt}
-              key={index}        
-              onDrag = { e => {
-                e.dataTransfer.setData('text', e.target.id)
+              key={index}
+              onDrag={(e) => {
+                e.dataTransfer.setData("text", e.target.id);
               }}
             >
               <img src={animationItem.imgSrc} alt={animationItem.imgAlt} />
@@ -48,7 +51,14 @@ function AnimationTools() {
           );
         })}
       </ul>
-      <div className="stop-animation-button">Stop Animation</div>
+      <div
+        className="stop-animation-button"
+        onClick={() => {
+          resetAnimation();
+        }}
+      >
+        Stop Animation
+      </div>
     </div>
   );
 }

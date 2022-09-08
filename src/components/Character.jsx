@@ -28,9 +28,11 @@ function Character({ character, id }) {
           e.target.classList.remove('hover-img');
           if(e.target.alt === "Rick Sanchez" && characterItem === "portal-gun.svg"){
             const animationItem = document.getElementById("PortalGun");
+            const portalSound = document.getElementById("portalSound");
             animationSlot.appendChild(animationItem);
             createAnimation("Portal Gun Animation");
-          
+            portalSound.play();
+            
           }
           if(e.target.alt === "Rick Sanchez" && characterItem === "flask.svg"){
             const animationItem2 = document.getElementById("Flask");

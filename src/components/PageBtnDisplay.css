@@ -8,9 +8,11 @@
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    z-index: 3;
+    z-index: 4;
     cursor: pointer;
 }
 .actual-page{
     font-size: 1.4rem;
+    position: relative;
+    z-index: 4;
 }

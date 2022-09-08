@@ -12,7 +12,7 @@
 .title-img{
  width: 50%;
  margin: auto;
- z-index: 2;
+ z-index: 5;
  transition: transform .4s ease-in-out;
 }
 .title-img-animation{
@@ -21,14 +21,4 @@
 .title-img-animation:hover{
   transform: scale(1.1);
   transition: transform .4s ease-in-out;
-}
-.animation-container{
-  display: block;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: red;
 }

@@ -3,15 +3,12 @@ import CharacterList from "./components/CharacterList";
 import LightningAnimation from "./components/LightningAnimation";
 import titleImg from "./assets/img/title.svg";
 import AnimationTools from "./components/AnimationTools";
-import {AppContext} from './context/AppContext'
-import {useContext} from 'react'
+import CanvasAnimation from './components/CanvasAnimation'
 
 function App() {
-  const {animation} = useContext(AppContext)
-
   return (
     <>
-      <canvas id={animation} className="animation-container"></canvas>
+      <CanvasAnimation/>
       <AnimationTools />
       <main className="page-container">
         <LightningAnimation />
