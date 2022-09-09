@@ -24,9 +24,10 @@ function Character({ character, id }) {
           const characterItemSrc = e.dataTransfer.getData('text').split('/');
           const characterItem = characterItemSrc[characterItemSrc.length - 1];
           const animationSlot = document.getElementById(`${character.name.split(' ').join('')}`);
+          console.log(characterItemSrc);
 
           e.target.classList.remove('hover-img');
-          if(e.target.alt === "Rick Sanchez" && characterItem === "portal-gun.svg"){
+          if(e.target.alt === "Rick Sanchez" && characterItem === "portal-gun.c22a5c12.svg"){
             const animationItem = document.getElementById("PortalGun");
             const portalSound = document.getElementById("portalSound");
             animationSlot.appendChild(animationItem);
@@ -41,8 +42,10 @@ function Character({ character, id }) {
           }
           if(e.target.alt === "Mr. Meeseeks" && characterItem === "meeseeks-box.svg"){
             const animationItem3 = document.getElementById("MeeseeksBox");
+            const meeseeksSound = document.getElementById('meeseeksSound');
             animationSlot.appendChild(animationItem3);
             createAnimation("Meeseeks Animation")
+            meeseeksSound.play();
           }
           if(e.target.alt === "Pickle Rick" && characterItem === "pickle.svg"){
             const animationItem4 = document.getElementById("Pickle");
