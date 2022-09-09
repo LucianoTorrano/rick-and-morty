@@ -65,7 +65,7 @@ function CanvasAnimation() {
         id="partyAnimation"
         className={
           animation === "Party Animation"
-            ? "partyAnimation display-block"
+            ? "partyAnimation display-flex"
             : "display-none"
         }
       >
