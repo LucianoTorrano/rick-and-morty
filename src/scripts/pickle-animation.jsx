@@ -77,6 +77,5 @@ window.addEventListener("load", () => {
     pickleCanvas.width = container.offsetWidth;
     pickleCanvas.height = container.offsetHeight;
   });
-  console.log(pickles)
   animate4();
 });
