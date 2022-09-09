@@ -3,10 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: red;
 }
 .diplay-block {
   display: block;
@@ -21,6 +17,7 @@
   top: 0;
   left: 0;
   opacity: 1;
+  overflow: hidden;
   animation: startAnimation 0.3s linear;
 }
 /* PORTAL GUN ANIMATION */
@@ -121,6 +118,26 @@
 }
 .blue{
   background-color:#00fcff;
+}
+
+/* PICKLE RICK ANIMATION */
+.pickleImg{
+  display: none;
+}
+.pickleAnimation{
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300vh;
+  width: 100%;
+}
+#pickleCanvas{
+  background-color: black;
+  min-height: 150vh;
+  display: block;
+  position: absolute;
+  z-index: 3;
 }
 
 

@@ -51,8 +51,10 @@ function Character({ character, id }) {
           }
           if(e.target.alt === "Pickle Rick" && characterItem === "pickle.svg"){
             const animationItem4 = document.getElementById("Pickle");
+            const pickleSound = document.getElementById("pickleSound");
             animationSlot.appendChild(animationItem4);
-            createAnimation("Pickle Rick Animation")
+            createAnimation("Pickle Rick Animation");
+            pickleSound.play();
           }
         }}
       />

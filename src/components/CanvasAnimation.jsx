@@ -3,10 +3,12 @@ import { AppContext } from "../context/AppContext";
 import PortalImg from "../assets/img/portal-img.png";
 import MeeseeksImg from "../assets/img/meeseeks.png";
 import RickImg from "../assets/img/rick.png";
+import PickleImg from "../assets/img/pickle.png";
 import MeeseeksSpriteImg from "../assets/img/meeseeks-sprite.svg";
 import PortalSound from "../assets/sound/portal-animation.mp3";
 import MeeseeksSound from "../assets/sound/mr-meeseeks.mp3";
 import RickPartySound from "../assets/sound/rick-party.mp3";
+import PickleRickSound from "../assets/sound/pickle-rick.mp3";
 import "./CanvasAnimation.css";
 
 function CanvasAnimation() {
@@ -67,7 +69,12 @@ function CanvasAnimation() {
             : "display-none"
         }
       >
-        <img src={RickImg} id="rick" alt="Rick drunk" />
+        <img
+          src={RickImg}
+          id="rick"
+          alt="Rick drunk"
+          onDragStart={(e) => e.preventDefault()}
+        />
         <div className="lights-container">
           <div className="circle blue lightOne" />
           <div className="circle green lightTwo" />
@@ -96,6 +103,28 @@ function CanvasAnimation() {
           src={RickPartySound}
           className="rickSound"
           id="rickSound"
+        ></audio>
+      </div>
+      <div
+        id="pickleAnimation"
+        className={
+          animation === "Pickle Rick Animation"
+            ? "pickleAnimation display-block"
+            : "pickleAnimation display-none"
+        }
+      >
+        <canvas id="pickleCanvas" className="animation-canvas pickleRickCanvas"></canvas>
+        <img
+          src={PickleImg}
+          alt="Pickle Rick"
+          className="pickleImg"
+          id="pickleImg"
+          onDragStart={(e) => e.preventDefault()}
+        />
+        <audio
+          src={PickleRickSound}
+          className="pickleSound"
+          id="pickleSound"
         ></audio>
       </div>
     </>
