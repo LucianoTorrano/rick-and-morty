@@ -27,7 +27,7 @@ function Character({ character, id }) {
           console.log(characterItemSrc);
 
           e.target.classList.remove('hover-img');
-          if(e.target.alt === "Rick Sanchez" && characterItem === "portal-gun.c22a5c12.svg"){
+          if(e.target.alt === "Rick Sanchez" && characterItem === "portal-gun.svg"){ //portal-gun.c22a5c12.svg
             const animationItem = document.getElementById("PortalGun");
             const portalSound = document.getElementById("portalSound");
             animationSlot.appendChild(animationItem);
@@ -37,8 +37,10 @@ function Character({ character, id }) {
           }
           if(e.target.alt === "Rick Sanchez" && characterItem === "flask.svg"){
             const animationItem2 = document.getElementById("Flask");
+            const rickPartySound = document.getElementById("rickSound")
             animationSlot.appendChild(animationItem2);
-            createAnimation("Party animation")
+            createAnimation("Party Animation");
+            rickPartySound.play();
           }
           if(e.target.alt === "Mr. Meeseeks" && characterItem === "meeseeks-box.svg"){
             const animationItem3 = document.getElementById("MeeseeksBox");

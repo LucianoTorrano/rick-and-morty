@@ -39,6 +39,7 @@
     margin-top: 1rem;
     border: 2px dashed rgba(195, 0, 0, 0.44);
     color: rgb(195, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
     font-weight: bold;
     cursor: pointer;
     transition: box-shadow .3s;
