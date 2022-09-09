@@ -4,10 +4,12 @@ import LightningAnimation from "./components/LightningAnimation";
 import titleImg from "./assets/img/title.svg";
 import AnimationTools from "./components/AnimationTools";
 import CanvasAnimation from './components/CanvasAnimation'
+import InstructionWindow from './components/InstructionWindow'
 
 function App() {
   return (
     <>
+      <InstructionWindow/>
       <CanvasAnimation/>
       <AnimationTools />
       <main className="page-container">
